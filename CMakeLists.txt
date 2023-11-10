@@ -2,17 +2,18 @@
 # You should always specify a range with the newest
 # and oldest tested versions of CMake. This will ensure
 # you pick up the best policies.
-cmake_minimum_required(VERSION 3.1...3.27)
+cmake_minimum_required(VERSION 3.21)
 
 # This is your project statement. You should always list languages;
 # Listing the version is nice here since it sets lots of useful variables
 project(
-  ModernCMakeExample
+  cmakehello
   VERSION 1.0
   LANGUAGES C)
 
 # If you set any CMAKE_ variables, that can go here.
 # (But usually don't do this, except maybe for C++ standard)
+set(CMAKE_INSTALL_PREFIX "/opt/cmakehello")
 
 # Find packages go here.
 
@@ -22,3 +23,4 @@ project(
 
 # Adding something we can run - Output name matches target name
 add_executable(cmakehello cmakehello.c)
+install(TARGETS ${PROJECT_NAME} DESTINATION bin)
