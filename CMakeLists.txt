@@ -2,13 +2,13 @@
 # You should always specify a range with the newest
 # and oldest tested versions of CMake. This will ensure
 # you pick up the best policies.
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 3.16)
 
 # This is your project statement. You should always list languages;
 # Listing the version is nice here since it sets lots of useful variables
 project(
   cmakehello
-  VERSION 1.0
+  VERSION 1.2
   LANGUAGES C)
 
 # If you set any CMAKE_ variables, that can go here.
